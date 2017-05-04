@@ -10,6 +10,7 @@ module.exports = {
     entry: './app.js',
     output: {
         filename: 'bundle.js',
+        // chunkFilename: '[id].chunk.js',
         path: path.resolve(__dirname, './dist'),
         // publicPath: 'http://127.0.0.1:8888',
     },
@@ -69,7 +70,7 @@ module.exports = {
         //创建一个htmlWebpackPlugin对象，并传入值
         new htmlWebpackPlugin({
             template: 'index.html', //生成html文件的模板文件
-            filename: '../index.html', //目标文件的名称
+            filename: './index.html', //目标文件的名称
             inject: false,  //插入html文档中的位置，value分别为 true，false，head，body
             title: 'mdzz~~~', // 传入的html的title
             // excludeChunks: ['b', 'c'] // 引入的除b.js 与c.js以外的js文件

@@ -1,14 +1,16 @@
 <template>
     <div class="mdzz">
-       homeeeeeee
-       homeeeeeee
-       homeeeeeee
-       homeeeeeee
+      {{msg}}
     </div>
 </template>
 
 <script>
-
+  export default {
+    el: '#root',
+    data() {
+      msg: 'hommmmmmmmmmmmmmmmmmmmmmeeeeeeeeee'
+    }
+  }
 </script>
 
 <style lang="css">

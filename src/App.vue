@@ -1,29 +1,31 @@
 <template>
-    <div id="mdzz2">
+    <div id="app">
+      <h1>Route Alias</h1>
+      <ul>
+        <li><router-link to="/foo">
+          /foo (renders /home/foo)
+        </router-link></li>
 
-        <p>
-            <!-- 使用 router-link 组件来导航. -->
-            <!-- 通过传入 `to` 属性指定链接. -->
-            <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
-            <router-link to="/foo">Go to Foo</router-link>
-            <br/>
-            <router-link to="/bar">Go to Bar</router-link>
-        </p>
-        <!-- 路由出口 -->
-        <!-- 路由匹配到的组件将渲染在这里 -->
-        <router-view></router-view>
+        <li><router-link to="/home/bar-alias">
+          /home/bar-alias (renders /home/bar)
+        </router-link></li>
+
+        <li><router-link to="/baz">
+          /baz (renders /home/baz)</router-link>
+        </li>
+
+        <li><router-link to="/home/baz-alias">
+          /home/baz-alias (renders /home/baz)
+        </router-link></li>
+
+        <li><router-link to="/home">
+          /home (renders /home/default)
+        </router-link></li>
+
+        <li><router-link to="/home/nested-alias/foo">
+          /home/nested-alias/foo (renders /home/nested/foo)
+        </router-link></li>
+      </ul>
+      <router-view class="view"></router-view>
     </div>
 </template>
-
-<script>
-    import mdzz from './components/mdzz.vue';
-    import home from './components/home.vue';
-    export default {
-        data() {
-            return {
-                msg: '~~~~~~~~~~~e~~~~~~~~~~e~~~~~~~~~~~~~E~~~~~EEE~~~~~~~~'
-            }
-        },
-        components: {mdzz, home}
-    }
-</script>
