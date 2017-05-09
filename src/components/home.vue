@@ -1,15 +1,11 @@
 <template>
-    <div class="mdzz">
-      {{msg}}
-    </div>
+    <p>home==page</p>
 </template>
 
 <script>
+//    import Router from '../components/router.vue';
   export default {
-    el: '#root',
-    data() {
-      msg: 'hommmmmmmmmmmmmmmmmmmmmmeeeeeeeeee'
-    }
+
   }
 </script>
 

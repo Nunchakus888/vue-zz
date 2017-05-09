@@ -1,19 +1,16 @@
 <template>
-    <div class="mdzz">
-        <h1>name: {{name}}</h1>
-        <h2>gender: {{gender}}</h2>
-    </div>
+    <p>{{name}}</p>
 </template>
 
 <script>
     export default {
-        el: '#root',
         data() {
             return {
                 name: 'mdzz~~',
                 gender: 'girl~fsadf~'
             }
-        }
+        },
+//        components: { Router }
     }
 </script>
 

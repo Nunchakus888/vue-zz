@@ -3,6 +3,7 @@ node_modules
 TODOs.md
 dist/*.gz
 dist/*.map
+dist
 explorations
 docs/_book
 .idea

@@ -32,28 +32,22 @@ module.exports = {
             { test: /\.(html|tpl)$/, loader: 'html-loader' },
         ]*/
         rules: [
-            {
-                test: /\.js$/,//排除指定的文件目录里的js文件 /^((?!my_legacy_code).)*\.js$/ 剩余的(js文件)则由 Babel 处理.
+            {test: /\.js$/,//排除指定的文件目录里的js文件 /^((?!my_legacy_code).)*\.js$/ 剩余的(js文件)则由 Babel 处理.
                 use: [{
                     loader: 'babel-loader',
                     options: { presets: ['es2015'] }
                 }],
             },
+            {test: /\.vue$/, use: ['vue-loader']},
+            {test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader']},
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-            },
-            {
-                test: /\.(sass|scss)$/,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader",
-                ]
-            },
-            {
-                test: /\.vue$/,
-                use: ['vue-loader']
+                test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000
+                    }
+                }]
             },
         ],
         // devtool: 'eval-source-map',
@@ -72,7 +66,7 @@ module.exports = {
             template: 'index.html', //生成html文件的模板文件
             filename: './index.html', //目标文件的名称
             inject: false,  //插入html文档中的位置，value分别为 true，false，head，body
-            title: 'mdzz~~~', // 传入的html的title
+            title: 'mdzz~runrunrun~~', // 传入的html的title
             // excludeChunks: ['b', 'c'] // 引入的除b.js 与c.js以外的js文件
         }),/*
         new htmlWebpackPlugin({
